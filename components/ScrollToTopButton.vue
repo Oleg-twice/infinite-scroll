@@ -40,4 +40,12 @@
     cursor: pointer;
     font-size: 16px;
   }
+
+  @media (max-width: 600px) {
+    .scroll-to-top-btn {
+      max-width: 125px;
+      max-height: 50px;
+      padding: 0 10px;
+    }
+  }
 </style>

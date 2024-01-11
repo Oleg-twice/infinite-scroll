@@ -5,8 +5,11 @@ export default defineNuxtConfig({
     typeCheck: true
   },
   css: ['animate.css'],
+  modules: [
+    '@nuxt/image',
+  ],
   app: {
-    baseURL: 'https://oleg-twice.github.io/infinite-scroll/index.html', // baseURL: '/<repository>/'
-    buildAssetsDir: 'assets', 
-  },
+    baseURL: '/infinite-scroll/', // baseURL: '/<repository>/'
+    buildAssetsDir: 'assets', // don't use "_" at the begining of the folder name to avoids nojkill conflict
+  }
 })

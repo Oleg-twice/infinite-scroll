@@ -20,7 +20,10 @@
     align-items: center;
     justify-content: center;
     position: fixed;
-    left: 45%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
   }
   .loading {
     display: inline-block;
@@ -28,7 +31,7 @@
     height: 2.5rem;
     border: 10px solid rgba(3, 22, 39, 0.705);
     border-radius: 50%;
-    border-top-color: #0b4380;
+    border-top-color: #3c89dc;
     animation: spin 1s ease-in-out infinite;
   }
   @keyframes spin {

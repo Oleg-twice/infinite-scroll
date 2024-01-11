@@ -41,9 +41,11 @@
     <Skeleton v-if="!scrollerRef" />
 
     <Observer :loadMore="loadMore"/>
+
+    <Loader :isLoading="isLoading" />
     
     <div class="footer">
-      <Loader :isLoading="isLoading" />
+      
     </div>
     <ScrollToTopButton
       :scroll-to-top="scrollToTop"
@@ -82,6 +84,16 @@
 </script>
 
 <style>
+  .user-list {
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    position: relative;
+    padding: 40px 0;
+  }
+
   .scroller {
     height: 100%;
     scroll-behavior: smooth;
@@ -122,6 +134,8 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    width: 100%;
+    max-width: 900px;
   }
 
   .header .text, .header .text.main {
@@ -155,16 +169,6 @@
 
   .header .main-div-content .text.main {
     padding: 0 20px;
-  }
-
-  .user-list {
-    max-width: 900px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0 auto;
-    position: relative;
-    padding: 40px 0;
   }
 
   .user {
@@ -229,5 +233,45 @@
     padding: 10px 15px;
     cursor: pointer;
     font-size: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .user-list {
+      padding: 60px 0;
+    }
+    
+    .cell {
+      width: 130px;
+      align-self: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .main-div-content {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      max-width: 130px;
+      min-width: 130px;
+    }
+
+    .name-text-holder {
+      margin: 10px 0 0 40px;
+    }
+
+    .image {
+      width: 64px;
+      height: 64px;
+    }
+
+    .arrow {
+      right: 13px;
+      top: 17px;
+    }
+
+    .text {
+      text-align: center;
+    }
   }
 </style>

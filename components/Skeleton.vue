@@ -2,10 +2,7 @@
   <div class="user user-skelet" v-for="(user, index) in users">
     <div class="row">
       <div class="cell">
-        <div class="image" />
-        <div class="">
-          <div class="text main skeleton"></div>
-        </div>
+        <div class="text main skeleton"></div>
       </div>
       <div class="cell">
         <div class="text main skeleton"></div>
@@ -33,6 +30,14 @@
     padding: 0 20px;
   }
 
+  .user-skelet {
+    display: flex
+  }
+
+  .skeleton:first-child {
+    margin-left: 10px;
+  }
+
   .skeleton::before {
     content: '';
     position: absolute;
@@ -48,6 +53,24 @@
     display: block;
     width: 300px;
     margin-top: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .user-skelet .cell, .main-div-content {
+      display: block;
+      width: 130px;
+    }
+
+    .skeleton {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      height: 20px;
+      border-radius: 10px;
+      width: 50px;
+      min-width: 50px;
+      padding: 0 20px;
+    }
   }
 
 @keyframes progress {
