@@ -1,0 +1,26 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "predeploy": "nuxt generate",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1",
+    "nuxt": "^3.9.0",
+    "vue": "^3.4.6",
+    "vue-router": "^4.2.5"
+  },
+  "dependencies": {
+    "@tanstack/vue-query": "^5.17.9",
+    "add": "^2.0.6",
+    "animate.css": "^4.1.1",
+    "vue-virtual-scroller": "^2.0.0-beta.8"
+  }
+}
